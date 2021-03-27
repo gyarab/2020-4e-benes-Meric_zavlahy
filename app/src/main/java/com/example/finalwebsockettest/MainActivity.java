@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
         //SharedPreferences sharedSettings = getApplicationContext().getSharedPreferences("settings", Context.MODE_PRIVATE);
         public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-            Float realMoisture = Float.valueOf((prefs.getString("moisture", "10.2")));
+            int realMoisture = prefs.getInt("moisturee", 10);
             Log.d("MoistureChange","MoistureChange happend>>>  " + realMoisture);
             if (key.equals("moisture") && realMoisture < 2.0)  {
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), ANDROID_CHANNEL_ID)

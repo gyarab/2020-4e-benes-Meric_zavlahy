@@ -22,18 +22,25 @@ public class CheckMoisture extends Worker {
     public Result doWork(){
         Client c = null; // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
         try {
+            //ws://192.168.1.184:80
             c = new Client(new URI(
-                    "ws://192.168.208.10:8080"), new Draft_6455()) {
+                    "wss://young-stream-00076.herokuapp.com/client"), new Draft_6455()) {
                 @Override
                 public void onMessage(String message) {
                     super.onMessage(message);
                     Log.d("Worker","Running, message: " + message);
+                    String[] messageArr = message.split(":", 3);
+                    int moisture = Integer.parseInt(messageArr[0]);
+                    int configWet = Integer.parseInt(messageArr[1]);
+                    int configDry = Integer.parseInt(messageArr[2]);
                     Calendar.getInstance().getTime();
 
                     SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("data",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
                     SimpleDateFormat sdf = new SimpleDateFormat ("MM/dd/yyyy HH:mm:ss");
-                    editor.putString("moisture",message);
+                    editor.putInt("moisturee", moisture);
+                    editor.putInt("configWet", configWet);
+                    editor.putInt("configDry", configDry);
                     editor.putString("time", sdf.format(Calendar.getInstance().getTime()));
                     editor.apply();
 

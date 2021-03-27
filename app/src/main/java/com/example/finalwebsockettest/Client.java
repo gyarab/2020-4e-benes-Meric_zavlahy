@@ -28,7 +28,7 @@ public class Client extends WebSocketClient {
 
 
     public void onOpen(ServerHandshake handshakedata) {
-        send("Hello, it is me. Mario :)");
+        send("Data request");
         Log.d("client", "opened connection");
         // if you plan to refuse connection based on ip or httpfields overload: onWebsocketHandshakeReceivedAsClient
     }

@@ -39,7 +39,7 @@ import java.util.List;
 
 public class FirstFragment extends Fragment {
 
-    String TextMoisture;
+    int TextMoisture;
     String TextTime;
 
     SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -68,12 +68,12 @@ public class FirstFragment extends Fragment {
         TextView timeView = (TextView)view.findViewById(R.id.timeTextView);
 
         SharedPreferences sharedPref = getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
-        TextMoisture = sharedPref.getString("moisture", "Unknown Value");
+        TextMoisture = sharedPref.getInt("moisturee", 000);
         TextTime = sharedPref.getString("time", "UknownTime");
-
+        Log.d("testxtmoisture", "moisture:  " + TextMoisture);
         sharedPref.registerOnSharedPreferenceChangeListener(listener);
 
-        textView.setText(TextMoisture);
+        textView.setText(Integer.toString(TextMoisture));
         timeView.setText(TextTime);
 
 
