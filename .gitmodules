@@ -1,0 +1,6 @@
+[submodule "Meric_android_app"]
+	path = Meric_android_app
+	url = https://github.com/benes-gyarab/Meric_android_app.git
+[submodule "Meric_server"]
+	path = Meric_server
+	url = https://github.com/benes-gyarab/Meric_server.git
