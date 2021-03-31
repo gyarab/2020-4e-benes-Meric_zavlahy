@@ -11,9 +11,6 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
 
         <action
             android:id="@+id/action_FirstFragment_to_WifiLoginFragment"
@@ -23,47 +20,39 @@
             app:destination="@id/FirstFragment" />
 
     </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.finalwebsockettest.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-
-
-
-    </fragment>
     <fragment
         android:id="@+id/WifiLoginFragment"
         android:name="com.example.finalwebsockettest.WifiLoginFragment"
         android:label="fragment_wifi_login"
-        tools:layout="@layout/fragment_wifi_login" >
-        <action
-            android:id="@+id/action_WifiLoginFragment_to_setupWifiFragment"
-            app:destination="@id/SetupWifiFragment" />
+        tools:layout="@layout/fragment_wifi_login">
+
+        android:id="@+id/action_WifiLoginFragment_to_activity_redirect_webview"
+        app:destination="@id/activity_redirect_webview" />
     </fragment>
-    <fragment
-        android:id="@+id/SetupWifiFragment"
-        android:name="com.example.finalwebsockettest.SetupWifiFragment"
-        android:label="fragment_setup_wifi"
-        tools:layout="@layout/fragment_setup_wifi" >
-        <action
-            android:id="@+id/action_SetupWifiFragment_to_activity_redirect_webview"
-            app:destination="@id/activity_redirect_webview" />
-    </fragment>
+
     <activity
         android:id="@+id/activity_redirect_webview"
         android:name="com.example.finalwebsockettest.activity_redirect_webview"
         android:label="activity_redirect_webview" />
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/SettingsFragment"
         android:name="com.example.finalwebsockettest.SettingsFragment"
-        android:label="SettingsFragment" >
+        android:label="SettingsFragment">
         <action
             android:id="@+id/action_settingsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_WifiLoginFragment"
+            app:destination="@id/WifiLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CalibrationFragment"
+        android:name="com.example.finalwebsockettest.CalibrationFragment"
+        android:label="fragment_calibration"
+        tools:layout="@layout/fragment_calibration">
+        <action
+            android:id="@+id/action_calibrationFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

@@ -27,25 +27,12 @@
         android:layout_width="117dp"
         android:layout_height="56dp"
         android:layout_marginTop="520dp"
+        android:backgroundTint="@color/toolbarGreen"
         android:text="Get value"
-        android:backgroundTint="#32b851"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/wifimanager_button"
-        android:layout_width="174dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="165dp"
-        android:layout_marginEnd="119dp"
-        android:backgroundTint="#32b851"
-        android:text="WifiManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_value" />
 
     <TextView
         android:id="@+id/timeTextView"
@@ -53,9 +40,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="#c9d1cb"
+        android:textColor="@color/backgroundText"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/wifimanager_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

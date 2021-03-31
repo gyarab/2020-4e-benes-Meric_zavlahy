@@ -43,6 +43,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "org.java-websocket:Java-WebSocket:1.5.1"
     implementation "androidx.work:work-runtime:2.4.0"
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
 
 
 }

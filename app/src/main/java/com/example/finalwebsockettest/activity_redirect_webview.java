@@ -1,12 +1,15 @@
 package com.example.finalwebsockettest;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
+
+//Aktivita na zobrazení webové stránky s nastavením wifi
 
 public class activity_redirect_webview extends AppCompatActivity {
     private WebView webView;
@@ -15,6 +18,8 @@ public class activity_redirect_webview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redirect_webview);
+        getSupportActionBar().setTitle("Choose network");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.toolbarGreen, null)));
 
         webView = (WebView) findViewById(R.id.redirect_webview);
         webView.setWebViewClient(new WebViewClient());

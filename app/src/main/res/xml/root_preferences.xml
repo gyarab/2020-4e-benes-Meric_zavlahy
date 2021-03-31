@@ -1,33 +1,29 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory
         app:key="notifications_category"
         app:title="Notifications">
 
-    <EditTextPreference
-        android:defaultValue="30"
-        android:key="moisture_limit"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:title="moisture level"
-        android:inputType="numberDecimal"
-        android:digits="0123456789"
-        />
+        <EditTextPreference
+            android:defaultValue="50"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="moisture_limit"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/notification_settings_summary"
+            android:title="Moisture level" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        app:key="wifi_category"
-        app:title="Wifi">
-
-        <Preference
-            app:key="activity"
-        app:title="Configure wifi">
-            <intent
-            android:targetPackage="com.example.finalwebsockettest"
-            android:targetClass="com.example.finalwebsockettest.activity_redirect_webview"/>
-         </Preference>
+        <EditTextPreference
+            android:defaultValue="30"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="check_interval"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/interval_settings_summary"
+            android:title="Moisture check interval" />
 
     </PreferenceCategory>
 

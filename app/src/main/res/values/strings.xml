@@ -1,16 +1,20 @@
 <resources>
     <string name="app_name">FinalWebSocketTest</string>
     <string name="action_settings">Settings</string>
+    <string name="action_calibration">Calibration</string>
+    <string name="action_wifiSetup">Wifi setup</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="wifi_Help">Once the sensor is ON press CONNECT. After a successful connection press CHOOSE NETWORK </string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calibration_info">Select if the plant is wet or dry</string>
     <string name="title_activity_redirect_webview">activity_redirect_webview</string>
     <!--
     This string is used for square devices and overridden by hello_world in
@@ -24,7 +28,8 @@
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="interval_settings">Moisture check interval</string>
-    <string name="interval_settings_summary">Choose how often is the moisture checked</string>
+    <string name="notification_settings_summary">Choose at which percentage of moisture you want to be notified</string>
+    <string name="interval_settings_summary">In minutes choose how often is moisture checked in the background</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
@@ -33,4 +38,8 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="pref_size_key">10</string>
+    <string name="title_activity_calibration">CalibrationActivity</string>
+    <string name="title_activity_WifiSetup">WifiSetupActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

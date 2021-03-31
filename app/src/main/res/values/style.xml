@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="SettingsFragmentStyle">
+
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColor">#CCC</item>
+        <item name="android:background">@color/backgroundGrey</item>
+
+    </style>
 </resources>
