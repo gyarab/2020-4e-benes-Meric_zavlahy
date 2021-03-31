@@ -4,3 +4,6 @@
 [submodule "Meric_server"]
 	path = Meric_server
 	url = https://github.com/benes-gyarab/Meric_server.git
+[submodule "Meric_arduino_central"]
+	path = Meric_arduino_central
+	url = https://github.com/benes-gyarab/Meric_arduino_central
